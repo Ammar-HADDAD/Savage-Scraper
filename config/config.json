@@ -1,0 +1,76 @@
+{
+  "KEY": "tr",
+  "COUNTRY": "Turkey",
+  "BASE_URL": "https://www.amazon.com.tr",
+  "SELECTORS": {
+    "hamburger_menu": ["#nav-hamburger-menu"],
+    "N1": ["(//div[@id='hmenu-content'])[1]//a[@data-menu-id]"],
+    "N2N3": [
+      "(//div[@id='hmenu-container'])[1]//div[contains(@class, 'hmenu') and @data-menu-id != '1']"
+    ],
+    "n4_categories": [
+      "//div[@id='n-title']/following-sibling::ul[1]//li[contains(@class, 'apb-browse-refinements-indent-2') or contains(@class, 's-navigation-indent-2')]//a"
+    ],
+    "n5_categories": [
+      ".apb-browse-refinements-indent-2 a, .s-navigation-indent-2 a, .s-navigation-indent-2 .s-navigation-item"
+    ],
+    "four_stars_filter": [
+      "//i[contains(@class, 'a-star-medium-4')]/ancestor::a[1]"
+    ],
+    "shipping_by_amazon_filter": [
+      "[id='p_98/21345978031'] a, #p_98-title ~ ul a, #filter-p_98 a"
+    ],
+    "products_container": [".a-section.a-spacing-base"],
+    "products_name": [
+      ".a-size-base-plus.a-spacing-none.a-color-base.a-text-normal"
+    ],
+    "product_name": ["#productTitle"],
+    "product_image": ["#landingImage"],
+    "product_rating": ["#acrPopover"],
+    "product_price": [
+      "#corePriceDisplay_desktop_feature_div div > span.aok-offscreen, #corePrice_desktop span.a-price-range, #corePrice_desktop span.a-offscreen"
+    ],
+    "product_reviews": ["#acrCustomerReviewText"],
+    "product_seller": [
+      "//div[contains(@id, 'merchantInfoFeature')]/div[not(contains(@class, 'label'))]//span[contains(@class,'display-feature')] | //a[@id='sellerProfileTriggerId']"
+    ],
+    "product_sender": [
+      "//div[contains(@id, 'fulfillerInfoFeature')]/div[not(contains(@class, 'label'))]//span[contains(@class,'display-feature')]"
+    ],
+    "product_metadata1": ["#productOverview_feature_div table"],
+    "product_metadata2": ["#productDetails_techSpec_section_1"],
+    "product_metadata3": ["#productDetails_detailBullets_sections1"],
+    "product_tags": [
+      "#zeitgeistBadge_feature_div a.badge-link, .mvt-ac-badge-wrapper span.a-size-small, #BESTSELLER"
+    ],
+    "product_sales": ["#social-proofing-faceout-title-tk_bought"],
+
+    "products_rating": ["i[data-cy='reviews-ratings-slot'] span"],
+    "products_url": [
+      ".a-link-normal.s-line-clamp-4.s-link-style.a-text-normal"
+    ],
+    "products_tag": [
+      ".puis-status-badge-container, .mvt-ac-badge-wrapper span.a-size-small"
+    ],
+    "products_reviews": [".a-size-base.s-underline-text"],
+    "products_price": ["span.a-offscreen"],
+    "products_prime": [".a-icon.a-icon-prime"],
+    "products_original_price": [
+      ".//span[@class='a-price a-text-price' and @data-a-color='secondary']"
+    ],
+    "products_brand": [".//span[@class='a-size-base-plus a-color-base']"],
+    "products_next_page": ["//a[contains(@class,'s-pagination-next')]"],
+    "N1N2N3_ready": ["#nav-hamburger-menu"],
+    "N4_ready": [".a-column"],
+    "N5_ready": [".a-column, #departments"],
+    "products_ready": ["#navBackToTop"],
+    "product_ready": ["#landingImage"],
+    "cookie_accept": ["#sp-cc-accept"],
+    "error_page_indicator": [
+      "//center/a | //button[@type='submit'] | //a[@id='nav-bb-logo']"
+    ],
+    "error_page_handler": [
+      "//a[@href='https://www.amazon.com.tr/ref=cs_503_link/'] | //button[@type='submit'] | //a[@id='nav-bb-logo']"
+    ]
+  }
+}
